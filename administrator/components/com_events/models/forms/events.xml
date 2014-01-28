@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_EVENTS_FORM_LBL_EVENTS_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_EVENTS_FORM_LBL_EVENTS_CREATED_BY"
+            description="COM_EVENTS_FORM_DESC_EVENTS_CREATED_BY"  /> 
+
+       <field name="title" type="text"
+                
+            label="COM_EVENTS_FORM_LBL_EVENTS_TITLE"
+            description="COM_EVENTS_FORM_DESC_EVENTS_TITLE" 
+                
+                
+                 required="true" 
+            class="evt-title"
+            filter="safehtml" /> 
+
+       <field name="description" type="textarea"
+                
+            label="COM_EVENTS_FORM_LBL_EVENTS_DESCRIPTION"
+            description="COM_EVENTS_FORM_DESC_EVENTS_DESCRIPTION" 
+                
+                
+                 required="true" 
+            filter="string" />
+
+       <field name="image" type="file"
+                
+            label="COM_EVENTS_FORM_LBL_EVENTS_IMAGE"
+            description="COM_EVENTS_FORM_DESC_EVENTS_IMAGE" 
+                
+                
+                
+            menu_published="0"
+            filter="raw"
+            upload_directory="/img"
+            accept="image/jpeg,image/gif,image/png,image/bmp"
+            max_size="5" /> 
+
+       <field name="date" type="calendar"
+                
+            label="COM_EVENTS_FORM_LBL_EVENTS_DATE"
+            description="COM_EVENTS_FORM_DESC_EVENTS_DATE" 
+                
+                
+                 required="true" 
+            class="evt_date"
+            filter="raw" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_events"
+                            section="events"
+                        />
+
+	</fieldset>
+
+</form>

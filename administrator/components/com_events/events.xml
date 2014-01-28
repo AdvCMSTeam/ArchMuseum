@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_events</name>
+    <creationDate>2014-01-27</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Alex</author>
+    <authorEmail>alekzender89@gmail.com</authorEmail>
+    <authorUrl>http://</authorUrl>
+    <version>1.0.1</version>
+    <description></description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>events.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="en-GB">language/en-GB.com_events.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_events.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_events/assets/images/s_com_events.png" >COM_EVENTS</menu>
+        <submenu>
+            
+			<menu link="option=com_events&amp;view=eventss" view="eventss" img="components/com_events/assets/images/s_eventss.png" alt="Events/Eventss">COM_EVENTS_TITLE_EVENTSS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>events.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-GB">language/en-GB.com_events.ini</language>
+			<language tag="en-GB">language/en-GB.com_events.sys.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_events.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_events.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->

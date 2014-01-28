@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<extension type="module" version="2.5.0" method="upgrade">
+	<name>Future Events</name>
+	<description>Shows futre events, added to Events component</description>
+	<files>
+		<filename module="mod_future_events">mod_future_events.php</filename>
+		<filename>mod_future_events.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>media/index.html</filename>
+		<filename>media/default.jpg</filename>
+		<filename>media/main.js</filename>
+		<filename>media/style.css</filename>
+	</files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="textLimit" type="text" default="200" label="Text limit" description="Maximal number of characers in description" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
